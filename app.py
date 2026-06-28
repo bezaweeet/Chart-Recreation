@@ -61,7 +61,7 @@ ax.spines["left"].set_bounds(-0.35, 35.3)
 plt.text(192, interventions.index("Medicaid"), "about $180,000", va="center", fontsize=9)
 
 #add the source
-plt.figtext(-0.055, 0.07, "Source: Angela Wyse and Bruce D. Meyer, including analysis of prior intervention cost research. Values are measured in 2019 dollars. By The New York Times.",
+plt.figtext(-0.055, 0.07, "Source: Angela Wyse and Bruce D. Meyer, including analysis of prior intervention cost research. Values are \nmeasured in 2019 dollars. By The New York Times.",
             fontsize=7.5, color="gray", ha='left')
 
 plt.gca().set_ylim(-0.5, len(interventions) + 0.5)
