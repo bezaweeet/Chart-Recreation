@@ -70,4 +70,5 @@ plt.gca().set_ylim(-0.5, len(interventions) + 0.5)
 plt.gca().xaxis.grid(True, color='#f0f0f0', linestyle='-', linewidth=1, zorder=1)
 
 #display in streamlit
-st.pyplot(plt)
+fig = plt.gcf()
+st.pyplot(fig)
