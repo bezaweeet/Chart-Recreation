@@ -23,7 +23,8 @@ costs = [
     80, 85, 95, 105, 115, 180, 195, 210, 235, 255, 275, 310,
     365, 410, 520, 580, 680, 720, 830, 845, 850
 ]
-
+#ax object, we can access this object for customization of the graph
+ax = plt.gca()
 #set colors of the bar graphs
 colors = ["#f28e2b" if n == "Medicaid" else "#e0e0e0" for n in interventions]
 
@@ -34,9 +35,6 @@ plt.barh(interventions, costs, color=colors, zorder=3)
 for label in ax.get_yticklabels():
     if label.get_text() == "Medicaid":
         label.set_fontweight("bold")
-
-#ax object, we can access this object for customization of the graph
-ax = plt.gca()
 
 #title
 plt.title("Cost to save a year of life with...", loc='left', pad=35, x=-0.25, fontsize=14, fontweight="bold")
