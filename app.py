@@ -32,6 +32,7 @@ colors = ["#f28e2b" if n == "Medicaid" else "#e0e0e0" for n in interventions]
 plt.rcParams["font.family"] = "Arial"
 plt.figure(figsize=(9, 13))
 plt.barh(interventions, costs, color=colors, zorder=3)
+plt.draw()
 for label in ax.get_yticklabels():
     if label.get_text() == "Medicaid":
         label.set_fontweight("bold")
