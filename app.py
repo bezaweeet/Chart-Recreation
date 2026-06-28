@@ -58,7 +58,7 @@ ax.spines["left"].set_linewidth(1.5)
 ax.spines["left"].set_bounds(-0.35, 35.3)
 
 #highlighting medicaid
-plt.text(192, interventions.index("Medicaid"), "about $180,000", va="center", fontsize=9)
+plt.text(192, interventions.index("Medicaid"), "about $180,000", va="center", fontsize=9, fontweight = "bold")
 
 #add the source
 plt.figtext(-0.055, 0.07, "Source: Angela Wyse and Bruce D. Meyer, including analysis of prior intervention cost research. Values are \nmeasured in 2019 dollars. By The New York Times.",
