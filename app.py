@@ -32,10 +32,8 @@ colors = ["#f28e2b" if n == "Medicaid" else "#e0e0e0" for n in interventions]
 plt.rcParams["font.family"] = "Arial"
 plt.figure(figsize=(9, 13))
 plt.barh(interventions, costs, color=colors, zorder=3)
-plt.draw()
-for i, label in enumerate(ax.get_yticklabels()):
-    if label.get_text() == "Medicaid":
-        label.set_weight("bold")
+labels = ["$\\bf{Medicaid}$" if n == "Medicaid" else n for n in interventions]
+plt.yticks(range(len(interventions)), labels)
 #title
 plt.title("Cost to save a year of life with...", loc='left', pad=35, x=-0.25, fontsize=14, fontweight="bold")
 
