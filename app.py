@@ -33,9 +33,7 @@ plt.rcParams["font.family"] = "Arial"
 plt.figure(figsize=(9, 13))
 plt.barh(interventions, costs, color=colors, zorder=3)
 plt.draw()
-for label in ax.get_yticklabels():
-    if label.get_text() == "Medicaid":
-        label.set_fontweight("bold")
+ax.get_yticklabels()[interventions.index("Medicaid")].set_weight("bold")
 
 #title
 plt.title("Cost to save a year of life with...", loc='left', pad=35, x=-0.25, fontsize=14, fontweight="bold")
